@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrollment Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #navbar{
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 100px;
+    
+    
+}
+
+.link{
+    display: inline-block;
+    height: 50px;
+    text-decoration: none;
+    width: 100px;
+    padding-left: 100px;
+    padding: 50px;
+    color: #f4f4f4;
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-left: 50px;
+
+
+}   
+  </style>
+</head>
+
+<header>
+  <!--Nav bar of the Website -->
+<div id="navbar">
+  <!-- All the Links in the Nav bar -->
+  <div id="links">
+      
+          <a href="index.html" class="link"> Home</a>
+          <a href="courses.html" class="link"> Courses</a>
+          <a href="contactUs.html" class="link"> ContactUs</a>
+          <a href="enrollment.html" class="link">Enrollment</a>
+      
+  </div>
+</div>
+</header>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center mb-8">Student Enrollment Form</h1>
+    <form class="bg-white p-8 rounded-lg shadow-lg max-w-xl mx-auto">
+      <!-- Full Name -->
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your full name"
+          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+      </div>
+
+      <!-- Phone Number -->
+      <div class="mb-4">
+        <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+      </div>
+
+      <!-- Course Selection -->
+      <div class="mb-4">
+        <label for="course" class="block text-gray-700 font-medium mb-2">Select Course</label>
+        <select
+          id="course"
+          name="course"
+          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        >
+          <option value="" disabled selected>Select a course</option>
+          <option value="web-development">Web Development</option>
+          <option value="machine-learning">Machine Learning</option>
+          <option value="python-development">Python Development</option>
+      
+        </select>
+      </div>
+
+      <!-- Enrollment Type -->
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-2">Enrollment Type</label>
+        <div class="flex items-center">
+          <input
+            type="radio"
+            id="full-time"
+            name="enrollment_type"
+            value="full-time"
+            class="mr-2"
+            required
+          />
+          <label for="full-time" class="mr-4 text-gray-600">Full-time</label>
+
+          <input
+            type="radio"
+            id="part-time"
+            name="enrollment_type"
+            value="part-time"
+            class="mr-2"
+            required
+          />
+          <label for="part-time" class="text-gray-600">Part-time</label>
+        </div>
+      </div>
+
+      <!-- Additional Notes -->
+      <div class="mb-4">
+        <label for="notes" class="block text-gray-700 font-medium mb-2">Additional Notes</label>
+        <textarea
+          id="notes"
+          name="notes"
+          placeholder="Any additional information..."
+          class="w-full border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button
+          type="submit"
+          class="bg-blue-500 text-white font-medium py-2 px-6 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        >
+          Enroll Now
+        </button>
+      </div>
+    </form>
+  </div>
+
+  
+</body>
+</html>
